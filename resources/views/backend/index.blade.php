@@ -1,29 +1,6 @@
 @extends('backend.layouts.master')
 @section('content')
     <div class="row">
-        <div class="col-md-2">
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Settings</h3>
-                </div>
-                <div class="box-body">
-                    <form action="{{ route('settings.editDBCSV') }}" method="post">
-                        {{ csrf_field() }}
-                        <div class="form-group">
-                            <label for="db-csv">DB/CSV:</label>
-                            <select name="status" id="db-csv" class="form-control">
-                                <option {{ $statusTrackingProducts->status == 1 ? 'selected' : '' }} value="1">DB</option>
-                                <option {{ $statusTrackingProducts->status == 0 ? 'selected' : '' }} value="0">CSV</option>
-                            </select>
-                        </div>
-
-                        <button class="btn btn-primary">Submit</button>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-    </div>
    <div class="row">
        <div class="col-md-6">
 

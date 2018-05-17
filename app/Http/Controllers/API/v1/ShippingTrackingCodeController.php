@@ -52,6 +52,7 @@ class ShippingTrackingCodeController extends Controller
     {
        $tr = Tracking::where('tracking_code',$tracking_code)->first();
 
+
        if ($tr) {
            $tracking_product = [
                'product' => $tr->product->name,
